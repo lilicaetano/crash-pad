@@ -18,13 +18,11 @@ class FlatsController < ApplicationController
     else
       render 'new'
     end
-end
+  end
 
-private
+  private
 
   def flat_params
     params.require(:flat).permit(:name, :address, :description)
   end
-
-
 end
