@@ -13,11 +13,9 @@ def new
     end
   end
 
-private
+  private
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :guests)
   end
-end
-
 end
