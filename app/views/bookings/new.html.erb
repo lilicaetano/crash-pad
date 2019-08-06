@@ -1,1 +1,11 @@
-<h1>Snoop</h1>
+<h1>Book into <%= @flat.name %>!</h1>
+<%= simple_form_for([@flat, @booking]) do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :guests, collection: 1..6, selected: 2%>
+    <%= f.submit %>
+<% end %>
+<div>
+  <%= link_to 'Back to the pad', flat_path(@flat)%>
+</div>
+
