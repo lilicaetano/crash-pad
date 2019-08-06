@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: white;
 }
 
@@ -9,4 +9,24 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.move-right {
+  margin-left: auto;
+}
+
+#title {
+  font-size: 20px;
+  vertical-align: middle;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #393939;
+}
+
+.btn-sign-up {
+  color: #e67e23 !important;
+}
+
+.btn-sign-up:hover {
+  color: white !important;
 }
