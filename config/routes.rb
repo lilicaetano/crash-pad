@@ -5,6 +5,4 @@ Rails.application.routes.draw do
   resources :flats do
     resources :bookings
   end
-
-
 end
