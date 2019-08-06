@@ -1,1 +1,7 @@
-<h1>Flats/show</h1>
+<h1><%= @flat.name %></h1>
+  <p><%= @flat.address %></p>
+  <p> <%= @flat.description %></p>
+
+<br><br>
+<%= link_to "Book", new_flat_booking_path(@flat), class: 'btn btn-info' %>
+
