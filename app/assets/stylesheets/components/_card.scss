@@ -1,0 +1,32 @@
+.card-flat {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 50%;
+}
+
+.card-flat > img {
+  height: 200px;
+  width: 100%;
+}
+
+.card-flat h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-flat p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-flat .card-flat-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
