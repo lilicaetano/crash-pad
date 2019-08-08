@@ -1,14 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a new flat</h1>
+      <h1>Create a new pad</h1>
       <%= simple_form_for @flat do |f| %>
         <%= f.input :name %>
         <%= f.input :address %>
         <%= f.input :description %>
-        <%= f.submit class: 'btn btn-primary' %>
+        <div class="submit"><%= f.submit class: 'btn btn-info' %></div>
       <% end %>
     </div>
   </div>
-  <%= link_to "Back to flats list", flats_path %>
+
+    <div class='d-flex justify-content-between'>
+      <%= link_to 'Back to the pad', flats_path, class: 'btn btn-warning' %>
+    </div>
+
 </div>
+
+
