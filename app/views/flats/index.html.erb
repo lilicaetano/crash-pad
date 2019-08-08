@@ -1,11 +1,14 @@
 <h1>Crash Pad</h1>
 
-<div class="cards">
+<div class="card-flat">
   <% @flats.each do |flat| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)">
-        <div class="card-infos">
-          <%= flat.name %>
-        </div>
+    <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"/>
+    <div class="card-flat-info">
+      <div>
+        <h2><%= flat.name %></h2>
+        <p><%= flat.address %></p>
+      </div>
+      <h2 class="card-flat-pricing"><%= flat.price %></h2>
     </div>
   <% end %>
 </div>
