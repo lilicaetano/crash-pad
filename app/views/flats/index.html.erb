@@ -1,4 +1,9 @@
-<h1>Crash Pad</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://image.freepik.com/free-photo/sofa_74190-4103.jpg);">
+  <div class="container">
+    <h1><strong>Welcome!</strong></h1>
+  </div>
+</div>
+
 
 <div class="card-flat">
   <% @flats.each do |flat| %>
@@ -8,7 +13,7 @@
         <h2><%= flat.name %></h2>
         <p><%= flat.address %></p>
       </div>
-      <h2 class="card-flat-pricing"><%= flat.price %></h2>
+      <h2 class="card-flat-pricing"> £<%= flat.price %></h2>
     </div>
   <% end %>
 </div>
