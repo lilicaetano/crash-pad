@@ -1,4 +1,17 @@
 // Specific CSS for your home-page
-#main-container {
-  padding-top: 7vh;
+.home {
+  .banner {
+    .container {
+      display: flex;
+      height: 50%;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
 }
