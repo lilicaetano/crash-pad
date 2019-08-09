@@ -1,0 +1,46 @@
+.card-flat {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-flat-img {
+    img {
+      height: 150px;
+      width: 100%;
+    }
+  }
+
+  .card-flat-text {
+    padding-right: 5px;
+    height: 100%;
+
+    h2 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 12px;
+      opacity: .7;
+      margin: 0;
+    }
+  }
+
+  .card-flat-info {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(100% - 150px);
+  }
+
+  .card-flat-pricing {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
