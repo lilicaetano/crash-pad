@@ -1,0 +1,6 @@
+<h1>Your booking for <strong><%= @booking.flat.name %></strong></h1>
+<h2><%= @booking.flat.address %></h2>
+<h3>Starts on <%= @booking.start_date %></h3>
+<h3>Ends on <%= @booking.end_date%></h3>
+<%= link_to 'View Pad', flat_path(@booking.flat), class: 'btn btn-info' %>
+
