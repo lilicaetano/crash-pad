@@ -1,3 +1,7 @@
+a {
+  text-decoration: none !important;
+}
+
 .card-flat {
   overflow: hidden;
   background: white;
@@ -6,6 +10,14 @@
   height: 27vh;
   display: flex;
   flex-wrap: wrap;
+  color: #555;
+  transition-property: color, box-shadow;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: #000;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
 
   .card-flat-img {
     img {
