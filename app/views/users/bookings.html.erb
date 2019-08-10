@@ -1,0 +1,8 @@
+<% @bookings.each do |booking| %>
+  <div class = 'card p-3 my-1'>
+    <h3 class= 'card-flat-title'><%= booking.flat.name %></h3>
+    <p class = 'card-flat-text'><%= booking.flat.address %></p>
+    <p>From <strong><%= booking.start_date %></strong> / To <strong><%= booking.end_date %></strong></p>
+    <%= link_to 'View Flat', flat_path(booking.flat), class: 'btn btn-info' %>
+  </div>
+<% end %>
