@@ -1,0 +1,38 @@
+
+.flat-show{
+  width: 1100px;
+
+  .card-flat-text {
+    padding-right: 5px;
+    height: 100%;
+    padding-top: 10px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
+      padding-top: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: .7;
+      padding-top: 5px;
+    }
+  }
+
+  .card-flat-info {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(100% - 150px);
+  }
+
+  .card-flat-pricing {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+}
