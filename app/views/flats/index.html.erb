@@ -1,16 +1,18 @@
 <div class="cards flat-show">
   <% @flats.each do |flat| %>
-    <div class="card-flat">
-      <div class="card-flat-img">
-        <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"/>
-      </div>
-      <div class="card-flat-info">
-        <div class="card-flat-text">
-          <h2><%= flat.name %></h2>
-          <p><%= flat.address %></p>
+    <%= link_to flat_path(flat) do %>
+      <div class="card-flat">
+        <div class="card-flat-img">
+          <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"/>
         </div>
-        <div class="card-flat-pricing">£<%= flat.price %></div>
+        <div class="card-flat-info">
+          <div class="card-flat-text">
+            <h2><%= flat.name %></h2>
+            <p><%= flat.address %></p>
+          </div>
+          <div class="card-flat-pricing">£<%= flat.price %></div>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
