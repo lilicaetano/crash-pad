@@ -1,0 +1,28 @@
+.card-booking {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #555;
+  transition-property: color, box-shadow;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: #000;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+}
+
+.card-booking-text {
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+  }
