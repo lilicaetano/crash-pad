@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'geocoder'
 Booking.destroy_all
 Flat.destroy_all
 User.destroy_all
@@ -13,11 +14,21 @@ User.destroy_all
 puts 'start seeding'
 
 counter = 0
-
+Faker::Config.locale = 'en-GB'
 lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 15.times do
+  randLat = 51.5311 + rand(-0.1...0.1)
+  randLong = 0.0866 + rand(-0.1...0.1)
+  addressFound = Geocoder.search([randLat, randLong])
   newUser = User.create!(name: Faker::Name.name, email: "user#{counter}@bob.com", password: 'secret')
-  Flat.create!(name: Faker::Creature::Dog.breed + ' ' + ['House', 'Place', 'Crescent', 'End'].sample, address: Faker::Address.full_address, user: newUser, description: lorem, price: rand(50...350))
+  Flat.create!(name: Faker::Creature::Dog.breed + ' ' + ['House', 'Place', 'Crescent', 'End'].sample,
+               address: addressFound.first.address,
+               user: newUser,
+               description: lorem,
+               price: rand(50...350),
+               latitude:  randLat,
+               longitude: randLong
+              )
   counter += 1
 end
 
