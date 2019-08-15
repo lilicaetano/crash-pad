@@ -13,7 +13,9 @@
   </head>
   <body>
      <%= render 'shared/navbar' %>
-      <div class="container" id='main-container'>
+     <% unless params[:controller] == "pages" && params[:action] == "home" %>
+        <div class="container" id='main-container'>
+     <% end %>
 
     <%#= render 'shared/flashes' %>
       <%= yield %>
@@ -24,7 +26,9 @@
     <p class="alert"><%= alert %></p>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
- </div>
+    <% unless params[:controller] == "pages" && params[:action] == "home" %>
+      </div>
+    <% end %>
 
   <!-- <hr> -->
     <div class="footer">
