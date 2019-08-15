@@ -1,14 +1,16 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flat.all
+    @flats = policy_scope(Flat)
   end
 
   def show
     @flat = Flat.find(params[:id])
+    authorize @flat
   end
 
   def new
     @flat = Flat.new
+    authorize @flat
   end
 
   def create
