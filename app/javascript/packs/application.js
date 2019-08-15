@@ -3,7 +3,10 @@ import "../plugins/flatpickr"
 import flatpickr from "flatpickr"
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
 import "flatpickr/dist/themes/airbnb.css" // A path to the theme CSS
+import 'mapbox-gl/dist/mapbox-gl.css'
+import { initMapbox } from '../plugins/init_mapbox';
 
+initMapbox();
 
 flatpickr(".datepicker", {
 });
