@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    authorize @booking
     @booking.flat = Flat.find(params[:flat_id])
     @booking.user = current_user
     if @booking.save
