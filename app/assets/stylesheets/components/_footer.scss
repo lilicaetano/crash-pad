@@ -3,10 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 3.5rem;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  margin-top: 50px;
+  // margin-top: 50px;
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+
 }
 .footer-links {
   display: flex;
