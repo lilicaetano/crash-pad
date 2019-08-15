@@ -13,7 +13,7 @@
   </head>
   <body>
      <%= render 'shared/navbar' %>
-      <div class="container" id='main-container'>
+      <div class="container" id='main-container' style="min-height: calc(100vh - 60px)">
 
     <%#= render 'shared/flashes' %>
       <%= yield %>
@@ -26,7 +26,7 @@
     <%= javascript_pack_tag 'application' %>
  </div>
 
-  <!-- <hr> -->
+
     <div class="footer">
       <div class="footer-links">
 
