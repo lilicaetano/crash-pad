@@ -13,7 +13,12 @@
 @import "components/index";
 @import "pages/index";
 
+@import "reset.css";
 
 #main-container {
   padding-top: 75px;
+}
+
+a {
+  text-decoration: none !important;
 }

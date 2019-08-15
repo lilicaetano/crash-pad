@@ -1,13 +1,11 @@
-a {
-  text-decoration: none !important;
-}
+
+$spacing: 15px;
 
 .card-flat {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 100%;
-  height: 27vh;
   display: flex;
   flex-wrap: wrap;
   color: #555;
@@ -20,14 +18,25 @@ a {
   }
 
   .card-flat-img {
-    img {
-      height: 150px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50%;
+  
+    img { 
+      position: absolute;
       width: 100%;
+      height: auto;
+      margin: auto;
+      top: -100%;
+      right: -100%;
+      bottom: -100%;
+      left: -100%;
     }
   }
 
   .card-flat-text {
-    padding-right: 5px;
+    padding-right: $spacing;
     height: 100%;
 
     h2 {
@@ -43,12 +52,12 @@ a {
   }
 
   .card-flat-info {
-    padding: 16px;
+    padding: $spacing;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    min-height: 100px;
     width: 100%;
-    height: calc(100% - 150px);
   }
 
   .card-flat-pricing {
@@ -59,36 +68,4 @@ a {
     border-radius: 5px;
     background-color: $yellow;
   }
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 330px;
-  width: 508px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-left: -8vw;
-  margin-right: -1vw;
-
-  img {
-    max-height: 100%;
-    max-width: 100%;
-
-  }
-
-  h1 {
-      font-size: 32px;
-      padding: 16px;
-    }
-
-    p {
-      font-size: 12px;
-      opacity: .7;
-    }
 }
