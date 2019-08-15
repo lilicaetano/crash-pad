@@ -1,7 +1,12 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = policy_scope(Booking)
+  end
+
   def new
     @flat = Flat.find(params[:flat_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -13,6 +18,13 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   private
