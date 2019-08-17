@@ -1,2 +1,4 @@
 <h2><%= flat.name %></h2>
 <p><%= flat.address %></p>
+<p>£<%= flat.price %> per night</p>
+<%= link_to 'Book', flat_path(flat), class: 'btn btn-info' %>
