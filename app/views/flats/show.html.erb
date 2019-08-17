@@ -1,16 +1,20 @@
 <div class="flat-show">
   <div class="cards-banner">
     <div class="cards">
+      <% count = 1 %>
+      <% img_collection = 'https://source.unsplash.com/collection/8398163/' %>
       <div class="card-category">
-        <%= image_tag("F1 bedroom.jpg", alt: "Bedroom") %>
+        <img src=<%= "https://source.unsplash.com/collection/8398163/400x400/?sig=#{count}" %>/>
       </div>
 
+      <% count += 2 %>
       <div class="card-category">
-        <%= image_tag("F1 diningroom.jpg", alt: "Diningroom") %>
+        <img src=<%= "https://source.unsplash.com/collection/8398163/400x400/?sig=#{count}" %>/>
       </div>
 
+      <% count += 1 %>
       <div class="card-category">
-        <%= image_tag("F1 kitchen.jpg", alt: "Kitchen") %>
+        <img src=<%= "https://source.unsplash.com/collection/8398163/400x400/?sig=#{count}" %>/>
       </div>
     </div>
   </div>
