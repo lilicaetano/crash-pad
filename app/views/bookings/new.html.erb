@@ -1,19 +1,25 @@
 <div id="container">
-  <h1 class='my-3'>Book into <strong><%= @flat.name %></strong></h1>
-    <%= simple_form_for([@flat, @booking]) do |f| %>
-        <%= f.input :start_date, as: :string, required: false, input_html: {id: "start_date", class: "datepicker"} %>
-          <%= f.input :end_date, as: :string, required: false, input_html: {id: "end_date", class: "datepicker"} %>
-            <p class="price-tag" data-price="<%= @flat.price %>">Price £ <%= @flat.price %> per night</p>
-          <%= f.input :guests, collection: 1..6, selected: 2%>
-          <%= f.button :submit, "Book", class: "btn btn-info mr-5" %>
-              <%= link_to 'Back to the pad', flat_path(@flat), class: 'btn btn-warning' %>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1 class='my-3'>Book into <strong><%= @flat.name %></strong></h1>
 
-    <% end %>
+          <%= simple_form_for([@flat, @booking]) do |f| %>
+              <%= f.input :start_date, as: :string, required: false, input_html: {id: "start_date", class: "datepicker"} %>
+                <%= f.input :end_date, as: :string, required: false, input_html: {id: "end_date", class: "datepicker"} %>
+                  <p class="price-tag" data-price="<%= @flat.price %>">Price £ <%= @flat.price %> per night</p>
+                <%= f.input :guests, collection: 1..6, selected: 2%>
+                <%= f.button :submit, "Book", class: "btn btn-info mr-5" %>
+                    <%= link_to 'Back to the pad', flat_path(@flat), class: 'btn btn-warning' %>
 
-  <br>
+          <% end %>
 
-  <div>
-    <h2 class="full-price d-none"></h2>
+        <br>
+
+        <div>
+          <h2 class="full-price d-none"></h2>
+        </div>
+
+      </div>
+
+    </div>
   </div>
-
-</div>
