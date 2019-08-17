@@ -1,4 +1,5 @@
 class FlatsController < ApplicationController
+    skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @flats = policy_scope(Flat)
     @flats = Flat.geocoded #returns flats with coordinates
