@@ -8,8 +8,7 @@ class FlatsController < ApplicationController
       {
         lat: flat.latitude,
         lng: flat.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat }),
-        image_url: helpers.asset_url('map_pin.png')
+        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
       }
     end
   end
@@ -26,6 +25,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
+    authorize @flat
     @flat.user = current_user
     if @flat.save
       redirect_to flat_path(@flat)
