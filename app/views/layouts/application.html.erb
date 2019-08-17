@@ -8,13 +8,13 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application' %>
-
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
      <%= render 'shared/navbar' %>
+
      <% unless params[:controller] == "pages" && params[:action] == "home" %>
-        <div class="container" id='main-container'>
+        <div class="container" id='main-container' style="min-height: calc(100vh - 60px)">
      <% end %>
 
     <%#= render 'shared/flashes' %>
@@ -30,7 +30,7 @@
       </div>
     <% end %>
 
-  <!-- <hr> -->
+
     <div class="footer">
       <div class="footer-links">
 

@@ -1,11 +1,7 @@
-
 .flat-show{
-  width: 1100px;
-
   .card-flat-text {
     padding-right: 5px;
     height: 100%;
-    padding-top: 10px;
 
     h2 {
       font-size: 32px;
@@ -20,11 +16,26 @@
     }
   }
 
-  .card-flat-info {
-    padding: 16px;
+  .card-flat-show {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    transition-property: color, box-shadow;
+    transition-duration: 0.3s;
+  
+    &:hover {
+      color: #000;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+  }
+
+  .card-flat-info {
+    padding: 30px 30px 0 30px;
     width: 100%;
     height: calc(100% - 150px);
   }
@@ -32,14 +43,51 @@
   .card-flat-pricing {
     font-size: 24px;
     font-weight: bold;
-    margin: 0;
+    margin-right: auto;
   }
 
-  .btn-xl {
-    padding: 10px 40px;
-    // font-size: 35px;
-    border-radius: 20px;
-    color: #808080;
+  .cards {
+    grid-gap: 0px;
+  }
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .cards-banner {
+    background-size: cover;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    top: -15px;
+  }
+
+  .card-category {
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-flat-btns {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+
+    a {
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition-property: box-shadow;
+      transition-duration: 0.3s;
+      margin-left: 30px;
+    
+      &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      }
+    }
   }
 }
 

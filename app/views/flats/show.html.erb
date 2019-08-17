@@ -1,32 +1,36 @@
-<div class="cards">
- <!--  <div class="card-category">
 
-  </div> -->
-
-  <div class="card-category">
-    <%= image_tag("F1 diningroom.jpg", alt: "Diningroom") %>
-  </div>
-
-  <div class="card-category">
-    <%= image_tag("F1 kitchen.jpg", alt: "Kitchen") %>
-  </div>
-</div>
 
 <div class="flat-show">
+  <div class="cards-banner">
+    <div class="cards">
+      <div class="card-category">
+        <%= image_tag("F1 bedroom.jpg", alt: "Bedroom") %>
+      </div>
 
-  <div class="card-flat-info">
-    <div class="card-flat-text">
-      <h2><%= @flat.name %></h2>
-      <p><%= @flat.address %></p>
-      <p><%= @flat.description %></p>
-          <div class="card-flat-pricing">£<%= @flat.price %> per night</div>
+      <div class="card-category">
+        <%= image_tag("F1 diningroom.jpg", alt: "Diningroom") %>
+      </div>
+
+      <div class="card-category">
+        <%= image_tag("F1 kitchen.jpg", alt: "Kitchen") %>
+      </div>
     </div>
   </div>
-<div class='d-flex justify-content-center'>
-  <%= link_to "Book", new_flat_booking_path(@flat), class: 'btn btn-info btn-lg mr-5' %>
+  <div class="card-flat-show">
+    <div class="card-flat-info">
+      <div class="card-flat-text">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.address %></p>
+        <p><%= @flat.description %></p>
 
-  <%= link_to "View all pads", flats_path, class: 'btn btn-warning btn-lg' %>
-</div>
+      </div>
+    </div>
+    <div class="card-flat-btns">
+      <div class="card-flat-pricing">£<%= @flat.price %> per night</div>
+      <%= link_to "Book", new_flat_booking_path(@flat), class: 'btn btn-info btn-lg' %>
+      <%= link_to "View all pads", flats_path, class: 'btn btn-warning btn-lg' %>
+    </div>
+  </div>
 
 </div>
 
