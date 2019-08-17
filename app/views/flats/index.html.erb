@@ -1,10 +1,13 @@
 <div class="cards">
+  <% count = 1 %>
+  <% img_collection = 'https://source.unsplash.com/collection/8398163/' %>
   <% @flats.each do |flat| %>
     <%= link_to flat_path(flat) do %>
       <div class="card-flat">
         <div class="card-flat-img">
-          <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"/>
+          <img src=<%= "https://source.unsplash.com/collection/8398163/400x400/?sig=#{count}" %>/>
         </div>
+        <% count += 1 %>
         <div class="card-flat-info">
           <div class="card-flat-text">
             <h2><%= flat.name %></h2>
