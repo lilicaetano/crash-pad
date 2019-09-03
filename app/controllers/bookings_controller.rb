@@ -12,10 +12,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    authorize @booking
+    # authorize @booking
     @booking.flat = Flat.find(params[:flat_id])
-    @booking.user = current_user
-    if @booking.save
+    @booking.user = user_signed_in? ? current_user : User.new
+    if @booking.save!
+      authorize @booking
       redirect_to bookings_path
     else
       render :new
